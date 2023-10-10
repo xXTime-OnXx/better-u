@@ -1,0 +1,8 @@
+{
+  "name": "BetterU",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "9ac0a007"
+}
