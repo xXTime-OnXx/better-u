@@ -18,7 +18,6 @@ export class ImprovementService {
 
     const refq = query(this.collectionRef, where('user', '==', 'timon'));
     this.templateImprovementLists = collectionData(refq) as Observable<ImprovementDto[]>;
-    this.templateImprovementLists.subscribe(imp => console.log(imp));
   }
 
   public getImprovements(): Observable<Improvement[]> {
