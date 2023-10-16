@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "better-u-52066": {
+      "hosting": {
+        "app": [
+          "better-u-52066"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "better-u-52066"
+  }
+}

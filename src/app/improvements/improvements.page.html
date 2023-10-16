@@ -11,9 +11,29 @@
     </ion-toolbar>
   </ion-header>
 
+  <apx-chart
+    id="chart"
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [plotOptions]="chartOptions.plotOptions"
+    [stroke]="{lineCap: 'round'}"
+    [labels]="chartOptions.labels"
+    [colors]="['#2dd36f']"
+  ></apx-chart>
+
   <ion-list>
-    <ion-item>
-      <ion-checkbox justify="space-between">Brush Teeth (+1)</ion-checkbox>
+    <ion-list-header>
+      <ion-label>General</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let improvement of improvementList">
+      <ion-checkbox
+        labelPlacement="end"
+        justify="start"
+        [(ngModel)]="improvement.completed"
+        (ionChange)="onImprovementCheckboxChanged()">
+        {{ improvement.text }}
+      </ion-checkbox>
+      <ion-badge color="primary">{{ improvement.value }}</ion-badge>
     </ion-item>
   </ion-list>
 </ion-content>
