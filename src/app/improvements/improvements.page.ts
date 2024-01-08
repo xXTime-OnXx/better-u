@@ -50,6 +50,7 @@ export class ImprovementsPage implements OnDestroy {
 
   public onImprovementCheckboxChanged(): void {
     const totalCompletedImprovementValues = this.calculateTotalCompletedImprovementValues();
+    this.improvementService.updatePoints(totalCompletedImprovementValues);
     const progress = 100 / this.totalImprovementValues * totalCompletedImprovementValues;
     this.chartOptions.series = [progress];
   }
